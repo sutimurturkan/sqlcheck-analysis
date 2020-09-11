@@ -1,6 +1,6 @@
-#A simple way to detect the column wildcard usage in the given dataset of queries
 import os,glob
 
+#path to the folder where the sql files are located
 path = '/Users/sutimurturkan/Desktop/SQLCHECK/sqlqueries-master'
 
 def get_sql_files():
@@ -14,12 +14,6 @@ def get_file_name(file):
 def read_sql_files(file):
     f = open(file,"r")
     return f.read()
-
-def list_files():
-    for file in get_sql_files():
-        print(get_file_name(file))
-        print(read_sql_files(file))
-        print("------------------------------------")
 
 def query_file(index):
     x = []
@@ -38,18 +32,20 @@ def get_list_of_words(line):
     return words
 
 def is_column_wildcard(list):
-    for i in range(len(list)):
-        if (list[i], list[i+1]) == ('select','*'):
+    for i in range(1,len(list)):
+        if (list[i-1], list[i]) == ('select','*'):
             return "Column Wildcard Usage"
         else:
             return "No Antipatterns Detected"
 
 def main():
     for i in range(len(get_sql_files())):
+        print(get_file_name(get_sql_files()[i]))
         for line in get_list_of_lines(query_file(i)):
             word_list = get_list_of_words(line)
-            print(word_list)
             print(is_column_wildcard(word_list))
+        print("------------------------------------")
+
 
 if __name__ == "__main__":
     main()
