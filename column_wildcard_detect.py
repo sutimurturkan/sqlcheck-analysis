@@ -1,6 +1,7 @@
 import os,glob
 
-path = '/Users/sutimurturkan/Desktop/SQLCHECK/sqlqueries-sample'
+#path to the folder where the sql files are located
+path = '/Users/sutimurturkan/Desktop/SQLCHECK/sqlqueries-master'
 
 def get_sql_files():
     result = glob.glob(os.path.join(path, '*.sql'))
@@ -44,11 +45,11 @@ def is_column_wildcard(list):
             return "No Antipatterns Detected"
 
 def main():
-    for line in get_list_of_lines(query_file(0)):
-        word_list = get_list_of_words(line)
-        print(word_list)
-        print(is_column_wildcard(word_list))
-
+    for i in range(len(get_sql_files())):
+        for line in get_list_of_lines(query_file(i)):
+            word_list = get_list_of_words(line)
+            print(word_list)
+            print(is_column_wildcard(word_list))
 
 if __name__ == "__main__":
     main()
