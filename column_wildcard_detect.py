@@ -1,3 +1,4 @@
+#A simple way to detect the column wildcard usage in the given dataset of queries
 import os,glob
 
 #path to the folder where the sql files are located
