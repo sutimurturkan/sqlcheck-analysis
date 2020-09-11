@@ -1,4 +1,4 @@
-#A very simple way to detect common wildcard usage 
+#A very simple way to detect column wildcard usage 
 import os,glob
 
 path = '/Users/sutimurturkan/Desktop/SQLCHECK/sqlqueries-master'
