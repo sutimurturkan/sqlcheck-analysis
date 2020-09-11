@@ -1,7 +1,6 @@
 #A simple way to detect the column wildcard usage in the given dataset of queries
 import os,glob
 
-#path to the folder where the sql files are located
 path = '/Users/sutimurturkan/Desktop/SQLCHECK/sqlqueries-master'
 
 def get_sql_files():
