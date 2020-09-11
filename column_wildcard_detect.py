@@ -1,7 +1,6 @@
 #A very simple way to detect common wildcard usage 
 import os,glob
 
-#path to the folder where the sql files are located
 path = '/Users/sutimurturkan/Desktop/SQLCHECK/sqlqueries-master'
 
 def get_sql_files():
