@@ -1,3 +1,4 @@
+#A very simple way to detect common wildcard usage 
 import os,glob
 
 #path to the folder where the sql files are located
