@@ -24,7 +24,7 @@ def main():
 		for query in queries:
                     get_antipatterns(query)
 		print("Total queries are:  ", len(queries))
-		
+
 		cursor.close()
 	except sqlite3.Error as error:
 		print("Failed to read data from table", error)
