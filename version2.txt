@@ -1,0 +1,41 @@
+Connected to SQLite
+{'select * from mysql.user': [{'ID': 3001, 'name': 'Column Wildcard Usage', 'acronym': 'CWU', 'AP_Type': 'Query AP'}]}
+----------------
+{'CREATE TABLE payload (name text, value blob)': [{'ID': 1002, 'name': 'No Primary Key', 'acronym': 'NPK', 'AP_Type': 'Logical AP'}]}
+----------------
+{"CREATE TABLE privilege ( user_id char(20) NOT NULL DEFAULT '', rightstr char(30) NOT NULL DEFAULT '', defunct char(1) NOT NULL DEFAULT 'N')": [{'ID': 1002, 'name': 'No Primary Key', 'acronym': 'NPK', 'AP_Type': 'Logical AP'}, {'ID': 1003, 'name': 'No Foreign Key', 'acronym': 'NFK', 'AP_Type': 'Logical AP'}]}
+----------------
+{"SELECT * FROM wpdb_prefix_options WHERE option_name LIKE '_transient_wowcharcache%'": [{'ID': 3001, 'name': 'Column Wildcard Usage', 'acronym': 'CWU', 'AP_Type': 'Query AP'}, {'ID': 3004, 'name': 'Pattern Matching', 'acronym': 'PTM', 'AP_Type': 'Query AP'}]}
+----------------
+{"CREATE TABLE contest_problem ( problem_id int(11) NOT NULL DEFAULT '0', contest_id int(11) DEFAULT NULL, title varchar(200) DEFAULT NULL, num int(11) NOT NULL DEFAULT '0')": [{'ID': 1002, 'name': 'No Primary Key', 'acronym': 'NPK', 'AP_Type': 'Logical AP'}, {'ID': 1003, 'name': 'No Foreign Key', 'acronym': 'NFK', 'AP_Type': 'Logical AP'}]}
+----------------
+{'select comment from Comment comment left join comment.flags flags ON a = a group by comment having count(flags) >= 1': []}
+----------------
+{"SELECT * FROM harmony_access_records WHERE (entity_id = 0 OR entity_id = 123) AND grant_view = 1 AND entity_type = 'type'": [{'ID': 3001, 'name': 'Column Wildcard Usage', 'acronym': 'CWU', 'AP_Type': 'Query AP'}]}
+----------------
+{"SELECT DISTINCT fid, type, title, page, visibility FROM profile_field WHERE name = 'name'": []}
+----------------
+{'SELECT guid, respawntime, map, instance, difficulty, resettime, encountersMask FROM gameobject_respawn LEFT JOIN instance ON instance = id': []}
+----------------
+{'create table external_group_mapping ( group_id varchar(36) not null, external_group varchar(255) not null, added timestamp default current_timestamp not null, primary key (group_id, external_group))': [{'ID': 1001, 'name': 'Multi-valued Attribute', 'acronym': 'MVA', 'AP_Type': 'Logical AP'}], 'select identity_zone_id from users where authz_approvals.user_id = users.id': []}
+----------------
+{'create table external_group_mapping ( group_id varchar(36) not null, external_group varchar(255) not null, added timestamp default current_timestamp not null, primary key (group_id, external_group))': [{'ID': 1001, 'name': 'Multi-valued Attribute', 'acronym': 'MVA', 'AP_Type': 'Logical AP'}], 'select identity_zone_id from users where authz_approvals.user_id = users.id': []}
+----------------
+{'create table external_group_mapping ( group_id varchar(36) not null, external_group varchar(255) not null, added timestamp default current_timestamp not null, primary key (group_id, external_group))': [{'ID': 1001, 'name': 'Multi-valued Attribute', 'acronym': 'MVA', 'AP_Type': 'Logical AP'}], 'select identity_zone_id from users where authz_approvals.user_id = users.id': []}
+----------------
+{'insert into trigtest values (5)': [{'ID': 3005, 'name': 'Implicit Columns', 'acronym': 'IMC', 'AP_Type': 'Query AP'}]}
+----------------
+{"CREATE TABLE gpkg_contents (table_name TEXT NOT NULL PRIMARY KEY,data_type TEXT NOT NULL,identifier TEXT UNIQUE,description TEXT DEFAULT '',last_change DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ',CURRENT_TIMESTAMP)),min_x DOUBLE,min_y DOUBLE,max_x DOUBLE,max_y DOUBLE,srs_id INTEGER,CONSTRAINT fk_gc_r_srid FOREIGN KEY (srs_id) REFERENCES gpkg_spatial_ref_sys(srs_id))": [{'ID': 1007, 'name': 'God Table', 'acronym': 'GTB', 'AP_Type': 'Logical AP'}]}
+----------------
+{'create table child2 (id1 integer, id2 integer, foreign key(id2, id1) references parent(id2, id1))': [{'ID': 1005, 'name': 'Data In Metadata', 'acronym': 'DIM', 'AP_Type': 'Logical AP'}]}
+----------------
+{'create table test (id integer primary key, fn float default 0.0, sn not null)': [{'ID': 1004, 'name': 'Generic Primary Key', 'acronym': 'GPK', 'AP_Type': 'Logical AP'}, {'ID': 2001, 'name': 'Rounding Errors', 'acronym': 'RER', 'AP_Type': 'Physical AP'}]}
+----------------
+{"SELECT name FROM SQLITE_MASTER WHERE type = 'table' AND name = NEW.table_name AND sql LIKE ('%' || NEW.column_name || '%')": [{'ID': 3002, 'name': 'Concatenate Nulls', 'acronym': 'CON', 'AP_Type': 'Query AP'}, {'ID': 3004, 'name': 'Pattern Matching', 'acronym': 'PTM', 'AP_Type': 'Query AP'}]}
+----------------
+{'CREATE TABLE abc (curve_id INTEGER NOT NULL,edge_code TEXT NOT NULL,orientation TEXT,CONSTRAINT pk_curves PRIMARY KEY (curve_id, edge_code))': []}
+----------------
+{"CREATE TABLE IF NOT EXISTS sql_statements_log (id INTEGER PRIMARY KEY AUTOINCREMENT,time_start TIMESTAMP NOT NULL DEFAULT '0000-01-01T00:00:00.000Z',time_end TIMESTAMP NOT NULL DEFAULT '0000-01-01T00:00:00.000Z',user_agent TEXT NOT NULL,sql_statement TEXT NOT NULL,success INTEGER NOT NULL DEFAULT 0,error_cause TEXT NOT NULL DEFAULT 'ABORTED',CONSTRAINT sqllog_success CHECK (success IN (0,1)))": [{'ID': 1004, 'name': 'Generic Primary Key', 'acronym': 'GPK', 'AP_Type': 'Logical AP'}]}
+----------------
+Total queries are:   22
+The Sqlite connection is closed
